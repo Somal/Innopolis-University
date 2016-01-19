@@ -1,2 +1,2 @@
-# InnopolisUniversit
-Fall semestr of 2015 in UI)
+# Innopolis University
+This repo is result of my life in Innopolis
