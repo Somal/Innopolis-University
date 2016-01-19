@@ -1,8 +1,0 @@
-1) Create a console application that, given a folder path and a substring, prints names of files inside this folder (on any level) that contain the substring case-independently.
-
-[+] criterions:
-1) can find files in nested folders
-2) handles non-exitent input folders
-3) handles non-english text
-4) handles (detects?) different encodings
-5*) uses parallel file processing
