@@ -1,9 +1,0 @@
-
-public class MyTree<T> {//k-ary tree
-	T[] tree;
-	
-	 public <T> MyTree(int degree){
-		
-		
-	}
-}
