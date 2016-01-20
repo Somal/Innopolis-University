@@ -1,0 +1,12 @@
+
+public class LinkedNode<T> {
+	T data=null;
+	LinkedNode<T> parent=null;
+	LinkedNode<T> child1=null;
+	LinkedNode<T> child2=null;
+	
+	public LinkedNode<T> (T dat){
+		this.data=dat;
+		
+	}
+}

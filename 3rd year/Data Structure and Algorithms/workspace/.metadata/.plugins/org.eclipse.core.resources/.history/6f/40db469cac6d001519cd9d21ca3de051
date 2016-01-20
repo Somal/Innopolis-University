@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+
+public class MyTree<T> {// k-ary tree
+	ArrayList<T> list = new ArrayList<T>(10);
+	int degree = 0;
+
+	public <T> MyTree(int degree) {
+		this.degree = degree;
+	}
+
+	public void resize(int newSize) {
+		while (list.size() <= newSize)
+			list.add(null);
+	}
+	
+	
+}

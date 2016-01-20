@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+
+public class ParseTree<T> extends MyTree<T> {// k-ary tree
+	ArrayList<T> list = new ArrayList<T>(10);
+	int k = 0;
+
+	public <T> ParseTree() {
+		super(2);
+	}
+
+	public void postorderTraversalCalculating(int i) {
+		for (int j = 0; j < 2; j++) {
+			int child = childIndex(i, j);
+			if (get(child) != null)
+				postorderTraversal(child);
+		}
+
+		switch ((String) get(i)) {
+		case "+":
+			set(i,get(childIndex(i,0))+get(childIndex(i,1)) ) );
+			break;
+
+		}
+	}
+
+}

@@ -1,0 +1,78 @@
+import java.util.ArrayList;
+
+public class ParseTree extends MyTree<Object> {// k-ary tree
+	String[] list = { "*", "/", "+", "-" };
+
+	public ParseTree() {
+		super(2);
+		parseString("20+15*10-3/2", 0);
+	}
+
+	public void parseString(String input, int index) {
+		for (int j = list.length - 1; j >= 0; j--) {
+			String del=list[j];
+			int delIndex = input.indexOf(del);
+			
+			this.set(index, del);
+			parseString(input.substring(0, delIndex-1)),childIndex(index, 0));
+			parseString(input.substring(delIndex+1,input.length())));
+			
+			
+		}
+
+	}
+
+	public void deleteSubtreeFrom(int index) {
+		for (int j = 0; j < this.k; j++) {
+			int childIndex = childIndex(index, j);
+			if (get(childIndex) != null)
+				deleteSubtreeFrom(childIndex);
+		}
+		set(index, null);
+	}
+
+	<T> double commonConverter(T data) {
+		double output = 0;
+		if (Integer.class.isInstance(data))
+			output = new Double((int) data);
+		if (Double.class.isInstance(data))
+			output = (double) data;
+		return output;
+	}
+
+	public void calculating(int i) {
+		for (int j = 0; j < 2; j++) {
+			int child = childIndex(i, j);
+			if (get(child) != null)
+				calculating(child);
+		}
+		double a = new Double(10);
+
+		Object result = null;
+		if (String.class.isInstance(get(i)))
+			switch ((String) get(i)) {
+			case "+":
+				result = commonConverter(get(childIndex(i, 0))) + commonConverter(get(childIndex(i, 1)));
+				break;
+			case "-":
+				result = commonConverter(get(childIndex(i, 0))) - commonConverter(get(childIndex(i, 1)));
+				break;
+			case "*":
+				result = commonConverter(get(childIndex(i, 0))) * commonConverter(get(childIndex(i, 1)));
+				break;
+			case "/":
+				result = commonConverter(get(childIndex(i, 0))) / commonConverter(get(childIndex(i, 1)));
+				break;
+			}
+		else
+			result = commonConverter(get(i));
+
+		deleteSubtreeFrom(i);
+		set(i, result);
+
+		System.out.println(get(i).toString());
+		this.postorderTraversal(0);
+		System.out.println();
+	}
+
+}
