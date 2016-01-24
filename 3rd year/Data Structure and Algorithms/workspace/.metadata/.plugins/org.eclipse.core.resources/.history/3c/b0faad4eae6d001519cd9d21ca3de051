@@ -1,0 +1,8 @@
+
+public class TreeTest {
+	public void main(String[] args) {
+		MyTree<Integer> tree=new MyTree<Integer>(2);
+		
+	}
+
+}

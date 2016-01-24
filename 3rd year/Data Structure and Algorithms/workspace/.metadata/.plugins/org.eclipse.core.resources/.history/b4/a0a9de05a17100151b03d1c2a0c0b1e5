@@ -1,0 +1,27 @@
+
+public class LinkedNode<T> {
+	T data=null;
+	LinkedNode<T> parent=null;
+	LinkedNode<T> child1=null;
+	LinkedNode<T> child2=null;
+	
+	public LinkedNode (T dat){
+		this.data=dat;
+	}
+	
+	public LinkedNode(T data,LinkedNode parent,LinkedNode child1,LinkedNode child2){
+		this.data=data;
+		this.parent=parent;
+		this.child1=child1;
+		this.child2=child2;
+	}
+	
+	public T getData(){
+		return data;
+	}
+	
+	public void setData(T data){
+		this.data=data;
+	}
+	
+}

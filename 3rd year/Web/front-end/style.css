@@ -1,0 +1,67 @@
+*
+{
+
+
+}
+
+h1
+{
+    color: #f00;
+}
+
+.news
+{
+    border: 1px solid #ddd;
+}
+
+.new_state_important{
+    border: 1px solid #ff0000;
+}
+
+.news__title
+{
+    text-decoration: underline;
+}
+
+.publication
+{
+    border: 2px dashed blueviolet;
+}
+
+.publication__title
+{
+    font: 20px Arial;
+}
+
+#important
+{
+    color: #ff0000;
+}
+
+p
+{
+    font: 15px Arial;
+}
+
+/* обращаемся к селекторам. Т.е. ко всем header*/
+header
+{
+    width: 2000px;
+}
+
+/* обращаемся к классу*/
+.page__panel
+{
+
+
+}
+
+#header
+{
+
+
+}
+/*
+
+
+*/

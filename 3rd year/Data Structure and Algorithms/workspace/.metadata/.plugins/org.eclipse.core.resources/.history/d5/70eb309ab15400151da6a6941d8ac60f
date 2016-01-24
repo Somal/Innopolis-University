@@ -1,0 +1,9 @@
+
+public class Circle {
+	PointLinkedList pll=new PointLinkedList();
+	public Circle(double r, int rawsCount){
+		double angle=0.0d;
+		
+	}
+
+}

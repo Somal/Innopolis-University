@@ -1,0 +1,18 @@
+
+public class Circle {
+	PointLinkedList pll=new PointLinkedList();
+	double r;
+	public Circle(double r, int rawsCount){
+		double angle=0.0d;
+		this.r=r;
+		pll.addPoint(x, y);
+		for (int t=0;t<rawsCount;t++){
+			angle=2*Math.PI*t/rawsCount;
+		}
+	}
+	
+	Point calcPoint(double angle){
+		
+	}
+
+}
