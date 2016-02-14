@@ -13,7 +13,7 @@ public class Task {
     }
 
     public void setPsd(int psd) {
-        if (psd <= this.pcd)
+        if (psd <= this.pcd && (psd > 0 || psd == -1))
             this.psd = psd;
     }
 
@@ -22,7 +22,7 @@ public class Task {
     }
 
     public void setPcd(int pcd) {
-        if (this.psd <= pcd)
+        if (this.psd <= pcd && (pcd > 0 || pcd == -1))
             this.pcd = pcd;
     }
 
@@ -31,9 +31,9 @@ public class Task {
     }
 
     public void setAsd(int asd) {
-        if (asd < this.acd) {
-            if (asd == -1)
-                this.acd = -1;
+        if (asd == -1)
+            this.acd = this.asd = -1;
+        else if (asd < this.acd && asd>0) {
             this.asd = asd;
         }
     }
@@ -43,7 +43,9 @@ public class Task {
     }
 
     public void setAcd(int acd) {
-        if (this.asd != -1 && this.asd < acd)
+        if (acd == -1)
+            this.acd = -1;
+        else if (this.asd != -1 && this.asd < acd && acd > 0)
             this.acd = acd;
 
     }
