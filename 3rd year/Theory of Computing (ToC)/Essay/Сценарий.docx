@@ -1,0 +1,94 @@
+﻿
+Good day!
+We have prepared survey on theme «Probalistic automata» for course «Theory of Computation».
+We are Innopolis University student team (выкладываю эмблему уи): Sharavuev Ivan, Bormotova Anastasia, Sokolov Maxim, Izmailov Ilya.
+
+-----------------------
+Probalistic automata
+University:
+Course: Theory of Computation
+Team: Sharavuev Ivan, Bormotova Anastasia, Sokolov Maxim, Izmailov Ilya
+----------------
+Introduction
+In 1959 Michael Rabin from MIT formulated probabilistic automata and in 1963 he have written article about this.
+The probabilistic automata is a generalization of finite state automata. The difference is a state transition function. So all finite state automatas is probabilistic automata
+
+Consider it more detailed.
+Firstly, consider Finite State Automata or FSA.
+FSA by definition is set of sigma,S, S zero, F and M. Let consider all parts more detailed:
+Sigma is the input alphabet
+S is a set of states
+s zero is an initial state
+M is the state-transition function such that exists transition node to node (both from S) by this character from sigma
+F is the set of final states.
+
+Consider simple example:
+We starts from s zero. After it we can transite to s one   by delta one or to s two  by delta three. Also we can transite from s one  to s two by delta two. So we are doing it until input string ends. If we string ends in s two as a final state then string is accepted else not.
+
+Now let's consider probabilistic automata. It's extension of FSA. 
+So p.a. is set of sigma, s, s0,M and F.
+Sigma, s, s0 and F are the same.
+But M defines differently:
+M is a function from 2 variables (state and input character). Result of M is vector with n+1 length which includes probabilities of transition from node s to
+node s i by character sigma. Of course, every probabilities more than 0 and sum of all probabilities from node s equals 1.
+
+
+
+Now let's consider input string probability calculus.
+Assume x is input string then x is concatenation of sigmas from 1 till m.
+For probability calculus, we define 2-dimensional matrixes A from sigma by following formula.
+
+Let's draw A. It's a matrix with size n+1 by n+1. 
+Then we can calculate matrix of probabilities for full string as multiplication of A from epsilon and every sigma.
+
+A from epsilon is the identity matrix:
+
+
+Let's consider an example:
+We have following automata.
+Assume we have input string x as '210', s0 is the initial state and s1 is the final state.
+
+
+
+Defines matrixes for transitions:
+Calculate matrixes multiplication. So probabilities for x is this matrix.
+
+S zero is initial state.S1 is the final state. So probability of x is a s0 s1.
+So we can calculate probabilities for every probabilistic automata like sum of probabilities by following formula.
+
+But we didn't consider question of accepted strings. For answering on this question exists cut-point lambda.
+A cut-point is a real number from 0 till 1.
+If x is input string by alphabet and probability of x more than lambda.
+For our example, if the lambda is ..,  the 210 is accepted, if so..., then not accepted.
+
+
+Intensive development of the theory of probabilistic automata in 60-70th years of last century created sevetal types of application.
+So schemes of probabilistic automata are applying:
+
+1. To determine the possibilities of algorithmic systems
+2. In the design of discrete systems displaying a statistically regular random behaviour
+3. In the simulation of adaptive behaviour, e.g robots, living organisms, etc.
+
+Let's consider one of above applications namely method of statistical modeling:
+Consider the following situation:
+Exists an intersection of two roads which include two traffic lights respectively.
+So we can define probabilistic automata by following schema. Where q0 is the initial state (first road are opened), q1 is another state and P
+P defines by statistic of movement.
+
+
+
+So we can model different statistical situations.
+
+Other applications can be readed in our survey.
+In this video we describe main points of probabilistic automata, basic definitions and applications.
+Thank you for watching our video!
+
+
+
+
+
+
+Применение в жизни
+Методы статистического моделирования (тут можно норм анимацию сделать)
+Моделирование адаптивных процессов (анимация+пример)
+

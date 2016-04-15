@@ -1,0 +1,11 @@
+﻿Answers
+
+S — Single Responsobility principle — every my Java class have only one responsobility:
+Condition — change value
+Lamp — switch on/off lamp
+Switch -  switch on/off switch
+TableLamp — switch on/off TableLamp
+O — Open/Closed principle — if I want to extend system quality then I always can create inherited class and add new functions in the class. New class will support interface of base class and so programm behaviour will be constant (we only change name of class ans create new class)
+L — Liskov sunstitution principle — We can use implementation instead interfaces and behaviour will be constant
+I — Interface segregation principle — All interfaces have only one responsobility (the same with classes)
+D — Dependency inversion principle — All classes depends on only interfaces.

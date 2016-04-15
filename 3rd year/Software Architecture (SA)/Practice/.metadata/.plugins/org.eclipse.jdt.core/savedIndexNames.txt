@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+/media/somal/EC70EE3770EE0862/Documents/Innopolis University/3rd year/Software Architecture (SA)/Practice/.metadata/.plugins/org.eclipse.jdt.core
+1503005697.index
+962415599.index
